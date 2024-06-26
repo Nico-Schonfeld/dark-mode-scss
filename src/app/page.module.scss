@@ -1,0 +1,18 @@
+@use "./colors" as *;
+
+.mi-componente {
+  background: $bg-light;
+  color: $text-dark;
+  width: 100%;
+  height: 100vh;
+
+  &.dark {
+    background: $bg-dark;
+    color: $text-light;
+  }
+
+  &.light {
+    background: $bg-light;
+    color: $text-dark;
+  }
+}
