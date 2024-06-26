@@ -14,14 +14,19 @@ const AppPage = () => {
 
   if (!mounted) return null;
 
-  const themeStyle = theme as string;
+  const themeStyle = theme as string; // dark or light
 
   return (
-    <div className={`${styles["mi-componente"]} ${styles[themeStyle]}`}>
-      <h1>Title page</h1>
-      <button onClick={() => setTheme("dark")}>dark</button>
+    <section className={`${styles["mi-componente"]} ${styles[themeStyle]}`}>
+      <h1 className={`${styles["title"]} ${styles[themeStyle]}`}>Title page</h1>
+      <button
+        onClick={() => setTheme("dark")}
+        className={`${styles["btn"]} ${styles[themeStyle]}`}
+      >
+        dark
+      </button>
       <button onClick={() => setTheme("light")}>light</button>
-    </div>
+    </section>
   );
 };
 
